@@ -42,7 +42,7 @@ def human_type(element, text):
 
 def run_perfect_undetected_test():
     print("\n" + "="*50)
-    print("静态 ТЕСТ: ОБХОД КАПЧИ В ИНКОГНИТО (FIXED SIZE)")
+    print("ТЕСТ: ОБХОД КАПЧИ В ИНКОГНИТО (FIXED SIZE)")
     print("="*50)
     
     config = {"humanize": True}
@@ -54,7 +54,7 @@ def run_perfect_undetected_test():
         
         print("Шаг 2: Переход на главную страницу GitLab...")
         page.bring_to_front()
-        page.goto("https://gitlab.com", wait_until="domcontentloaded")
+        page.goto("https://about.gitlab.com", wait_until="domcontentloaded")
         
         human_delay(4.0, 7.0)
         
@@ -139,4 +139,4 @@ if __name__ == "__main__":
 
 ## 🎥 Демонстрация работы
 Видеозапись успешного автономного выполнения автотеста в режиме инкогнито:
-[Смотреть видео демонстрации](https://drive.google.com/file/d/1ceSyd5qbBYwYCmGg7__NOLOfLuEUTrfy/view?usp=sharing)
+[Смотреть видео демонстрации](https://google.com)
