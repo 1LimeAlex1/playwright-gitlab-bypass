@@ -42,7 +42,7 @@ def human_type(element, text):
 
 def run_perfect_undetected_test():
     print("\n" + "="*50)
-    print("ТЕСТ: ОБХОД КАПЧИ В ИНКОГНИТО (FIXED SIZE)")
+    print("ТЕСТ: ОБХОД КАПЧИ В ИНКОГНИТО")
     print("="*50)
     
     config = {"humanize": True}
