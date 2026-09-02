@@ -139,8 +139,5 @@ if __name__ == "__main__":
 
 ## 🎥 Демонстрация работы
 Видеозапись успешного автономного выполнения сквозного автотеста в режиме инкогнито:
-
-[![Смотреть видео демонстрации](https://youtube.com)](https://youtu.be/u-paUc_lW-Y)
-
-*Или кликните по прямой ссылке:* [Смотреть на YouTube](https://youtu.be/u-paUc_lW-Y)
+[Смотреть на YouTube](https://youtu.be/u-paUc_lW-Y) https://youtu.be/u-paUc_lW-Y
 
