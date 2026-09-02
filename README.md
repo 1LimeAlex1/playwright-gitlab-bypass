@@ -139,4 +139,4 @@ if __name__ == "__main__":
 
 ## 🎥 Демонстрация работы
 Видеозапись успешного автономного выполнения автотеста в режиме инкогнито:
-[Смотреть видео демонстрации](https://drive.google.com/file/d/1ceSyd5qbBYwYCmGg7__NOLOfLuEUTrfy/view?usp=sharing)
+[Смотреть видео демонстрации](https://youtu.be/u-paUc_lW-Y)
