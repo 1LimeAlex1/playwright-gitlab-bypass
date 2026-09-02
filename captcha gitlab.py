@@ -15,18 +15,19 @@ def human_type(element, text):
 
 def run_perfect_undetected_test():
     print("\n" + "="*50)
-    print("ТЕСТ: ОБХОД КАПЧИ В ИНКОГНИТО (PRODUCTION READY)")
+    print("ТЕСТ: ОБХОД КАПЧИ В ИНКОГНИТО (FIXED SIZE)")
     print("="*50)
     
     config = {"humanize": True}
     
     print("Шаг 1: Инициализация защищенного браузера Camoufox...")
-    with Camoufox(headless=False, **config) as browser:
+    # ФИКС: Задаем конкретное разрешение окна, чтобы вёрстка не съезжала
+    with Camoufox(headless=False, window=(1920, 1080), **config) as browser:
         page = browser.new_page()
         
         print("Шаг 2: Переход на главную страницу GitLab...")
         page.bring_to_front()
-        page.goto("https://about.gitlab.com/", wait_until="domcontentloaded")
+        page.goto("https://about.gitlab.com", wait_until="domcontentloaded")
         
         human_delay(4.0, 7.0)
         
@@ -37,7 +38,7 @@ def run_perfect_undetected_test():
             print(" Баннер Cookie успешно закрыт!")
         except Exception:
             try:
-                page.get_by_role("button", name="Accept All Cookies").click(timeout=2000)
+                page.get_by_role("button", name="Accept All Cookies").click(timeout=3000)
                 print(" Баннер Cookie успешно закрыт через запасной локатор!")
             except Exception:
                 print(" Баннер Cookie не найден или уже закрыт.")
@@ -100,7 +101,7 @@ def run_perfect_undetected_test():
             print("\n✅ Успешно! Капча Turnstile пройдена автотестом!")
             print("   Бэкенд GitLab вернул ошибку: 'Username has already been taken'!")
         except Exception:
-            print("\n❌ РЕЗУЛЬТАТ: Ошибка! Целевой текст не появился. Возможно, сработал блок или изменилась верстка.")
+            print("\n❌ РЕЗУЛЬТАТ: Ошибка! Целевой текст не появился.")
             
         print("="*50 + "\n")
         human_delay(3.0, 5.0)
